@@ -1,8 +1,9 @@
-const { Schema, model } = require('mongoose')
+const mongoose = require('mongoose');
 
-const TransactionSchema = new Schema({
+const transactionSchema = new mongoose.Schema({
     valor: { type: Number, required: true },
     descricao: { type: String, required: true },
+    formaPagamento: { type: String, required: true },
     numeroCartao: { type: String, required: true },
     ultimos4Digitos: { type: String, required: true },
     portadorCartao: { type: String, required: true },
@@ -11,4 +12,6 @@ const TransactionSchema = new Schema({
     createdAt: { type: Date, default: Date.now },
 });
 
-module.exports = model('Transaction', TransactionSchema)
+const Transaction = mongoose.model('Transaction', transactionSchema);
+
+module.exports = Transaction;
