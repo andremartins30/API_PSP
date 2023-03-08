@@ -12,7 +12,7 @@ O serviço utiliza o MongoDB para armazenamento de dados.
 
 3. Renomeie o arquivo `.env.example` para `.env` e preencha os valores apropriados para as suas variáveis de ambiente.
 
-4. Inicie o servidor: `npm start`
+4. Inicie o servidor: `npm run dev`
 
 ## Uso
 
